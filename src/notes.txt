@@ -1,0 +1,10 @@
+const createUser = (req, res) => {
+    // INSERT INTO USERS FIRST AND LAST NAME 
+    let sql = 'QUERY GOES HERE' let sql = 'INSERT INTO users (firstName, lastName) Values(?,?);'
+    // WHAT GOES IN BRACKETS
+    sql = mysql.format(sql, []) sql = mysql.format(sql, [req.body.firstName, req.body.lastName])
+
+    pool.query(sql(err,results) => { pool.query(sql(err,results) => {
+        if (err) return handleSQLError(res, err) if (err) return handleSQLError(res, err)
+    })}
+}
