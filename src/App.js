@@ -45,7 +45,7 @@ handleSubmit = (e) => {
   // post into your url server
   // mysql day 8 of 311
 
-  axios.post('https://git.heroku.com/rscheffelreact.git', {
+  axios.post('', {
     firstName: this.state.firstName,
     lastName: this.state.lastName
   })
