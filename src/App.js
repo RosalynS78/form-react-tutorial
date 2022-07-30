@@ -46,8 +46,10 @@ handleSubmit = (e) => {
   // mysql day 8 of 311
 
   axios.post('https://git.heroku.com/frozen-tor-01830.git', {
-    firstName: this.state.firstName,
-    lastName: this.state.lastName
+    // firstName: this.state.firstName,
+    // lastName: this.state.lastName
+    email: this.state.email,
+    password: this.state.password
   })
   .then(function (response) {
     console.log(response);
@@ -70,7 +72,7 @@ render() {
     <div className="App">
       <header className="App-header">
         
-      <p> My 2nd Form in React</p>
+      <p> Log In</p>
       {/* 3. visualize data */}
    {/* <form onSubmit={() => this.setState({})handleSubmit()}> */}
 
@@ -80,10 +82,10 @@ render() {
 
 
    {/* // 1. store data - event listener */}
-    <input name="firstName" type="text" value={this.state.firstName} onChange={(e) => {this.handleChange(e)}}></input>
-    <input type="submit"></input>
-    <input name="lastName" type="text" value={this.state.lastName} onChange={(e) => {this.handleChange(e)}}></input>
-    <input type="submit"></input>
+    <input name="email" type="text" value={this.state.email} onChange={(e) => {this.handleChange(e)}}></input>
+    <input type="email"></input>
+    <input name="password" type="text" value={this.state.password} onChange={(e) => {this.handleChange(e)}}></input>
+    <input type="password"></input>
    </form>
       </header>
     </div>
