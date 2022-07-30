@@ -45,7 +45,7 @@ handleSubmit = (e) => {
   // post into your url server
   // mysql day 8 of 311
 
-  axios.post('', {
+  axios.post('https://frozen-tor-01830.herokuapp.com/', {
     firstName: this.state.firstName,
     lastName: this.state.lastName
   })
